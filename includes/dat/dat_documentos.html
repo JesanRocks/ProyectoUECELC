@@ -1,0 +1,110 @@
+<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#doc">Documentos consignados</button><br>
+
+<div class="modal fade" id="doc" tabindex="-1" role="dialog" aria-labelledby="doc" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="doc">Documentos consignados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-ladel="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+          
+      <div class="modal-body">
+		<form class="form-inline" method="post" action="estudiantes.php">
+			<div class="form-row">
+			    <div class="form-group col-md-4">
+			    	<label>2 Copia  C.I (Estudiante)</label>
+					<select class="form-control" name="ci_est">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>1 Copia C.I (Representante)</label>
+			    	<select class="form-control" name="ci_rep">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>Copia y original de not. cert.</label>
+			    	<select class="form-control" name="corgcert">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>1 Foto del Representante</label>
+			    	<select class="form-control" name="f_rep">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>1 Copia  C.I (Padre)</label>
+			    	<select class="form-control" name="ci_pa">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>2 Copia Part. Nac</label>
+			    	<select class="form-control" name="part_nac">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">	
+			    	<label> Copia y Original del Boletín</label>
+			    	<select class="form-control"  name="corg_b">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>1 Copia C.I (Madre)</label>
+			    	<select class="form-control"  name="ci_ma">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			     	<label>4 Fotos del Estudiante</label>
+			     	<select class="form-control"  name="f_est">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label>Funda Transparente</label>
+			    	<select class="form-control" name="funda">
+					    <option>Entregado</option>
+					    <option>No entregado</option>
+					</select>
+			    </div>
+			    
+			</div>
+		
+      </div>
+          <!--Fin del modal-body-->
+
+      <div class="modal-footer">
+        <button class="btn btn-info" data-dismiss="modal">Cerrar</button>
+        <button class="btn btn-info" name="dat_doc" value="1">Cargar datos</button>
+        </form>
+      </div>
+    
+    </div>
+  </div>   
+</div>

@@ -1,0 +1,109 @@
+<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#ddp">Datos del padre</button><br>
+
+<div class="modal fade" id="ddp" tabindex="-1" role="dialog" aria-labelledby="ddp" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ddp">Datos del padre </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-ladel="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+          
+      <div class="modal-body">
+		<form class="form" action="estudiantes.php" method="post">
+
+			<div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="nomap">Nombres y Apellidos</label>
+			      <input class="form-control" type="text" name="nomap" placeholder="Nombres y Apellidos">
+			    </div>
+			    <div class="form-group col-md-3"> 
+					<label for="cedula">C.I.</label>
+					<input class="form-control" type="number" name="cedula" placeholder="Cédula">
+			    </div>
+
+			    <div class="form-group col-md-3">
+			    	<label for="edad">Edad</label>
+					<input class="form-control" type="number" name="edad" placeholder="Edad">
+			    </div>
+
+			    <div class="form-group col-md-4"> 
+					<label for="pais_n">Lugar de nacimiento</label>
+				<input class="form-control" type="text" id="pais_n" name="pais_n" placeholder="Lugar de nacimiento">
+			    </div>
+
+			    <div class="form-group col-md-4">
+			    	<label for="estado">Estado</label>
+					<input class="form-control" type="text" name="estado" placeholder="Estado">
+			    </div>
+
+			    <div class="form-group col-md-4"> 
+					<label for="municipio">Municipio</label>
+					<input class="form-control" type="text" name="municipio" placeholder="Municipio">
+			    </div>
+
+				<div class="form-group col-md-12">
+			    	<label> Telefono de habitacion</label>
+			    </div>
+				<div class="form-group col-md-2"> 
+			     	<label>Operadora</label>
+					<select class="form-control" name="op_hab">
+						<option>0291</option>
+						<option>0292</option>
+						<option>0281</option>
+					</select>
+				</div>
+				<div class="form-group col-md-4"> 
+			    	
+					<label>Telefono</label>
+					<input class="form-control" type="" placeholder="Numero" name="num_hab">
+			    </div>
+
+				<div class="form-group col-md-12">
+			    	<label> Telefono celular</label>
+			    </div>
+			    <div class="form-group col-md-2"> 
+			     	<label>Operadora</label>
+					<select class="form-control" name="op_cel">
+						<option>0412</option>
+						<option>0414</option>
+						<option>0416</option>
+						<option>0424</option>
+						<option>0426</option>
+					</select>
+				</div>
+
+				<div class="form-group col-md-4"> 
+					<label>Telefono</label>
+					<input class="form-control" type="" placeholder="Numero" name="num_cel">
+			    </div>
+				
+				 <div class="form-group col-md-7"> 
+					<label>Profesion u oficio</label>
+					<input class="form-control" type="" placeholder="Profesion u oficio" name="puo">
+			    </div>
+
+				<div class="form-group col-md-5"> 
+					<label>Lugar de trabajo</label>
+					<input class="form-control" type="" placeholder="Lugar de trabajo" name="ldt">
+			    </div>
+
+			     <div class="form-group col-md-12"> 
+					<label>Dirección</label>
+					<input class="form-control" type="" placeholder="Dirección" name="dir">
+			    </div>
+			    
+			</div>
+		
+      </div>
+          <!--Fin del modal-body-->
+
+      <div class="modal-footer">
+        <button class="btn btn-info" data-dismiss="modal">Cerrar</button>
+        <button class="btn btn-info" name="dat_pa" value="1">Cargar datos</button>
+        </form>
+      </div>
+    </div>
+  </div>   
+</div>
