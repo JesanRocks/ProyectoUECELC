@@ -1,38 +1,51 @@
+<?php require_once 'includes/conexion/db.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unidad Educativa Complejo Educativo "Las Carolinas"</title>
-    <meta name="viewport" content="width-device-width, user-scalable-no, initial-scale-1.0, maximum-scale-1.0, minimum-scale-1.0">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script> 
-    <script src="js/bootstrap.min.js"></script>
-
-    <?php  
-    // Datos de la base de datos
-    $usuario = "root";
-    $contraseña = "root";
-    $servidor = "127.0.0.1";
-    $basededatos = "uece_lc";
-    
-    // creación de la conexión a la base de datos con mysql_connect()
-    $conexion = mysqli_connect( $servidor, $usuario, $contraseña ) or die ("No se ha podido conectar al servidor de Base de datos");
-    
-    // Selección del a base de datos a utilizar
-    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
-   include 'includes/mppe.html';
-
-   session_start();
-   ?>
-
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<script src="js/popper.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap4.min.js"></script>
+	<title>ZORDON</title>
+	<link rel="shortcut icon" href="img/icon.png" >
+	<script type="text/javascript">
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+	</script>
 </head>
-<body class=" bg-info">
-    <nav class=" navbar navbar-dark bg-primary">
-      <a class="navbar-brand col-2" href="#"><img src="img/logo-uecelc-min.png" class="img-responsive center" width="100px" height="100px"></a>
-      <h1 class="col-9 text-white text-center">Unidad Educativa Complejo Educativo <br> "Las Carolinas"</h1>
-    </nav>
-<br>
+
+<body>
+	<header style="position: fixed; top: 0; width: 100%; border: 0px solid green; background: white;">
+		<center>
+		<img src="img/gbcintillo.jpg" height="50px">
+		</center>
+
+<!-- 		<div class="bg-primary">
+			<div class="text-center justify-content-center align-items-center">
+			 <img class="img-fluid mx-auto d-block" src="img/lascarolinas.jpg" style="width:100%; max-height: 270px; max-width: 900px;"> 
+			</div>
+		</div> -->
+	</header>
+
+<!-- <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+  Tooltip on right
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+  Tooltip on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+  Tooltip on left
+</button> -->
