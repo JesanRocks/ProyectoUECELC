@@ -91,13 +91,13 @@
 
   <nav aria-label=Page navigation example class=text-center>
     <ul class=pagination d-flex justify-content-center>
-      <li class="page-item"><a class="page-link" href="listado.php?pagina=<?php echo $pagina-1; ?>">&laquo;</a></li>
+      <li class="page-item"><a class="page-link" href="lis-personal.php?pagina=<?php echo $pagina-1; ?>">&laquo;</a></li>
       
       <?php for ($i=1; $i <=$TotalPag ; $i++) { ?>
-      <li class="page-item"><a class="page-link" href="listado.php?pagina=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+      <li class="page-item"><a class="page-link" href="lis-personal.php?pagina=<?php echo $i; ?>"><?php echo $i; ?></a></li>
       <?php } ?>
 
-      <li class="page-item"><a class="page-link" href="listado.php?pagina=<?php echo $pagina+1; ?>">&raquo;</a></li>
+      <li class="page-item"><a class="page-link" href="lis-personal.php?pagina=<?php echo $pagina+1; ?>">&raquo;</a></li>
     </ul>
   </nav>
 

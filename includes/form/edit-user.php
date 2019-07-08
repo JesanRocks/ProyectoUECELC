@@ -80,7 +80,7 @@
         }
       ?>		
 	  <?php
-	    $sql="SELECT * FROM eav where tipo_id=72";
+	    $sql="SELECT * FROM eav where tipo_id=90";
 	    $ejec=mysqli_query($conexion,$sql);
 	    while ($filaP=mysqli_fetch_assoc($ejec)) {
 	  ?>

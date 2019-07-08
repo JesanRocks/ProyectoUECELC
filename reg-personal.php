@@ -1,11 +1,30 @@
 <?php 
 require_once 'includes/header.php';
 require_once 'includes/nav.php';
+
+if (isset($_POST['reg'])) {
+   
+  extract($_POST);
+
+  $SQL="INSERT INTO `personas`(`ci`, `pri_nom`, `seg_nom`, `pri_ape`, `seg_ape`) VALUES ('$ci','$pri_nom','$seg_nom','$pri_ape','$seg_ape')";
+  $Ejec=mysqli_query($conexion,$SQL);
+
+  $SQL="SELECT `id` FROM `personas` WHERE `ci`=$ci";
+  $Ejec=mysqli_query($conexion,$SQL);
+
+  while ($personas=mysqli_fetch_array($Ejec)) {$id=$personas['id'];}
+
+  $SQL="INSERT INTO `usuarios`(`usuario`, `clave`, `nivel_id`, `persona_id`) VALUES ('V-$ci','$ci','$nvl','$id')";
+  $Ejec=mysqli_query($conexion,$SQL);
+}
+
 ?>
 
 	<section class="container">
 <?php 
-alerta("El usuario se registro exitososamente");
+	if (isset($Ejec)) {
+		alerta("El usuario se registro exitososamente");
+	}
 ?>
   <form class="form" action="reg-personal.php" method="post">
     <br>
@@ -59,25 +78,7 @@ alerta("El usuario se registro exitososamente");
       </div>
     </div>
   </form> 
-<?php 
- 
-if (isset($_POST['reg'])) {
-   
-  extract($_POST);
 
-  $SQL="INSERT INTO `personas`(`ci`, `pri_nom`, `seg_nom`, `pri_ape`, `seg_ape`) VALUES ('$ci','$pri_nom','$seg_nom','$pri_ape','$seg_ape')";
-  $Ejec=mysqli_query($conexion,$SQL);
-
-  $SQL="SELECT `id` FROM `personas` WHERE `ci`=$ci";
-  $Ejec=mysqli_query($conexion,$SQL);
-
-  while ($personas=mysqli_fetch_array($Ejec)) {$id=$personas['id'];}
-
-  $SQL="INSERT INTO `usuarios`(`usuario`, `clave`, `nivel_id`, `persona_id`) VALUES ('V-$ci','$ci','$nvl','$id')";
-  $Ejec=mysqli_query($conexion,$SQL);
-}
-
-?>
 	</section>
 
 <?php require_once 'includes/footer.php'; ?>
