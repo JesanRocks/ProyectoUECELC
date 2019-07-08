@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-07-2019 a las 06:26:56
+-- Tiempo de generación: 08-07-2019 a las 07:38:20
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -221,10 +221,9 @@ INSERT INTO `eav` (`id`, `dsc`, `tipo_id`, `tipo_des`, `categoria_id`, `cat_des`
 (32, 'Rancho', 26, 'Tipo de vivienda', 25, 'Datos de vivienda'),
 (33, 'Otros', 26, 'Tipo de vivienda', 25, 'Datos de vivienda'),
 (34, 'Condicion de la vivienda', 25, 'Datos de vivienda', 1, 'No tiene'),
-(35, 'Limpia', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
-(36, 'Medianamente limpia', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
-(37, 'Medianamente sucia', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
-(38, 'Sucia', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
+(35, 'Propia', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
+(36, 'Alquilada', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
+(37, 'De un familiar', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
 (39, 'Otros', 34, 'Condicion de vivienda', 25, 'Datos de vivienda'),
 (40, 'Tipo de techos', 25, 'Datos de vienda', 1, 'No tiene'),
 (41, 'Plata-banda', 40, 'Tipos de techos', 25, 'Datos de vivienda'),
@@ -2188,7 +2187,9 @@ INSERT INTO `personas` (`id`, `ci`, `nac_id`, `fec_nac`, `pri_nom`, `seg_nom`, `
 (4, '12700180', 4, '1970-11-12', 'Josefina', '', 'Gil', '', 115),
 (5, '31916981', 4, '2003-02-01', 'José', 'Angel', 'Perez', 'Gil', 115),
 (6, '31916982', 4, '2005-11-12', 'Alberto', '', 'Perez', 'Gil', 115),
-(7, '31916983', 4, '2005-12-12', 'Josefina', '', 'Perez', 'Gil', 115);
+(7, '31916983', 4, '2005-12-12', 'Josefina', '', 'Perez', 'Gil', 115),
+(8, '1000', NULL, NULL, 'María', '', 'Figuera', '', NULL),
+(9, '10', NULL, NULL, 'Sandino', '', 'Rodriguez', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -2241,7 +2242,10 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `nivel_id`, `persona_id`) VALUES
 (1, 'V-000000', 'admin', 1, 1),
-(2, 'V-8377937', '8377937', 91, 2);
+(2, 'V-8377937', '8377937', 91, 2),
+(3, 'V-1000', '1000', 92, 8),
+(4, 'V-10', '10', 94, 9),
+(5, 'V-10', '10', 94, 9);
 
 -- --------------------------------------------------------
 
@@ -2473,7 +2477,7 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `representantes`
@@ -2485,7 +2489,7 @@ ALTER TABLE `representantes`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `vivienda`

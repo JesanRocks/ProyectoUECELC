@@ -1,4 +1,11 @@
-<?php require_once 'includes/header.php'; ?>
+<?php require_once 'includes/header.php'; 
+
+	if ($_SESSION['Usuario']) {
+		header('Location: sistema.php');
+	}
+
+
+?>
 <style type="text/css">
 	body{
 		background: url(img/bgsite.jpg), gray;

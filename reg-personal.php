@@ -4,7 +4,9 @@ require_once 'includes/nav.php';
 ?>
 
 	<section class="container">
-
+<?php 
+alerta("El usuario se registro exitososamente");
+?>
   <form class="form" action="reg-personal.php" method="post">
     <br>
     <div class="form-row">
