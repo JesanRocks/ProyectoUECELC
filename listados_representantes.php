@@ -54,6 +54,17 @@ require_once 'includes/nav.php';
     if (isset($_GET['editar'])) { $editar_id=$_GET['editar']; require_once 'includes/form/edit-rep.php';
     }
 
+if (isset($_GET['borrar'])) {
+    $borrar_id=$_GET['borrar'];
+    
+    $SQL="DELETE FROM `representantes` WHERE `persona_id` = '$borrar_id'"; 
+    $Ejec=mysqli_query($conexion,$SQL);
+
+    if ($Ejec) {
+        echo "<script>alert('Representante eliminado')</script>";
+        echo "<script>window.open('listados_representantes.php','_self')</script>";
+    }
+}
 ?>
 
   </div>

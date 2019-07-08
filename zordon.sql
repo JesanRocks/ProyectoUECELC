@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 24-06-2019 a las 18:15:30
--- Versión del servidor: 5.7.25-0ubuntu0.18.04.2
--- Versión de PHP: 7.2.15-0ubuntu0.18.04.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 08-07-2019 a las 06:26:56
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -54,10 +54,9 @@ CREATE TABLE `academicos` (
 --
 
 INSERT INTO `academicos` (`id`, `repitiente`, `asig_cur`, `mat_pend`, `pend_mat`, `beca_id`, `canaima_id`, `can_edo_id`, `can_serial`, `act_extca`, `plant_ant`, `period1`, `plantel1`, `period2`, `plantel2`, `period3`, `plantel3`, `persona_id`) VALUES
-(4, 52, 'todas', 55, 'ninguna', 58, 61, 64, '', 'ninguna', '', '', '', '', '', '', '', 2),
-(5, 52, 'todas', 55, 'ninguna', 58, 60, 63, 'qwertyuio', 'ninguna', '', '', '', '', '', '', '', 3),
-(6, 52, 'todas', 55, 'ninguna', 58, 60, 63, 'qwer4321', 'ninguna', 'U.EC.E. Las Carolinas', '2015-2016', 'Los guaritos', '2014-2015', 'Mesa Verde', '2013-2014', 'Mesa Verde', 4),
-(7, 52, 'todas', 55, 'ninguna', 58, 61, 63, '123', 'ninguna', 'Cambio', '2015-2016', 'Aca', '2014-2015', 'No se', '2013-2014', 'Alla', 5);
+(1, 52, 'Todas', 55, 'Ninguna', 58, 61, 64, 'c4n41m4', 'Ninguna', 'U.E. \"El plantel\"', '2016-2017', 'U.E. \"El plantel\"', '2017-2018', 'U.E. \"El plantel\"', '2018-2019', 'U.E. \"El plantel\"', 1),
+(2, 52, 'todas', 55, 'ninguna', 58, 61, 64, 'c4n41m4', 'ninguna', 'U.E. \"El plantel\"', '2016-2017', 'U.E. \"El plantel\"', '2017-2018', 'U.E. \"El plantel\"', '2018-2019', 'U.E. \"El plantel\"', 2),
+(3, 52, 'todas', 55, 'ninguna', 58, 61, 64, 'c4n41m4', 'ninguna', '', '2016-2017', 'U.E. \"El plantel\"', '2017-2018', 'U.E. \"El plantel\"', '2018-2019', 'U.E. \"El plantel\"', 3);
 
 -- --------------------------------------------------------
 
@@ -77,20 +76,11 @@ CREATE TABLE `direcciones` (
 --
 
 INSERT INTO `direcciones` (`id`, `direccion`, `parroquia_id`, `persona_id`) VALUES
-(1, 'C/ Ennio Gaudio', 262, 1),
-(2, 'La murallita', 265, 2),
-(3, 'C/ Ennio Gaudio', 262, 3),
-(4, 'C/ Ennio Gaudio', 262, 3),
-(5, 'C/ Ennio Gaudio', 262, 3),
-(6, 'Caicarta de Maturín', 1, 7),
-(7, 'Caicarta de Maturín', 1, 8),
-(8, 'Caicarta de Maturín', 1, 9),
-(14, 'Caicarta de Maturín', 1, 15),
-(15, 'Caicarta de Maturín', 1, 16),
-(17, 'Los Godos', 265, 18),
-(18, 'Los Godos', 265, 19),
-(19, 'Los Godos', 265, 20),
-(20, 'Caicarta de Maturín', 262, 21);
+(1, 'Zona Industrial - Urb. Laguna Paraíso', 265, 3),
+(2, 'Zona Industrial - Urb. Laguna Paraíso', 262, 4),
+(3, 'Zona Industrial - Urb. Laguna Paraíso', 262, 5),
+(4, 'Zona Industrial - Urb. Laguna Paraíso', 262, 6),
+(5, 'Zona Industrial - Urb. Laguna Paraíso', 262, 7);
 
 -- --------------------------------------------------------
 
@@ -110,30 +100,24 @@ CREATE TABLE `div_funcional` (
 --
 
 INSERT INTO `div_funcional` (`id`, `diversidad_id`, `informe`, `estudiante_id`) VALUES
-(1, 1, 'Si', 2),
-(2, 1, 'Si', 2),
-(3, 1, 'Si', 2),
-(4, 1, 'Si', 2),
-(5, 1, 'Si', 2),
-(6, 1, 'Si', 2),
-(7, 1, 'Si', 3),
-(8, 1, 'Si', 3),
-(9, 1, 'Si', 3),
-(10, 1, 'Si', 3),
-(11, 1, 'Si', 3),
-(12, 1, 'Si', 3),
-(13, 1, 'No', 4),
-(14, 1, 'No', 4),
-(15, 1, 'No', 4),
-(16, 1, 'No', 4),
-(17, 1, 'No', 4),
-(18, 1, 'No', 4),
-(19, 1, 'Si', 5),
-(20, 1, 'Si', 5),
-(21, 1, 'Si', 5),
-(22, 1, 'Si', 5),
-(23, 1, 'Si', 5),
-(24, 1, 'Si', 5);
+(1, 90, 'Si', 1),
+(2, 91, 'Si', 1),
+(3, 92, 'Si', 1),
+(4, 93, 'Si', 1),
+(5, 94, 'Si', 1),
+(6, 95, 'Si', 1),
+(7, 1, 'Si', 2),
+(8, 1, 'Si', 2),
+(9, 1, 'Si', 2),
+(10, 1, 'Si', 2),
+(11, 1, 'Si', 2),
+(12, 1, 'Si', 2),
+(13, 90, 'Si', 3),
+(14, 91, 'Si', 3),
+(15, 92, 'Si', 3),
+(16, 93, 'Si', 3),
+(17, 94, 'Si', 3),
+(18, 95, 'Si', 3);
 
 -- --------------------------------------------------------
 
@@ -152,46 +136,36 @@ CREATE TABLE `documentos` (
 --
 
 INSERT INTO `documentos` (`id`, `documento_id`, `estudiante_id`) VALUES
-(1, 79, 2),
-(2, 80, 2),
-(3, 81, 2),
-(4, 82, 2),
-(5, 83, 2),
-(6, 84, 2),
-(7, 85, 2),
-(8, 86, 2),
-(9, 87, 2),
-(10, 88, 2),
-(11, 1, 3),
-(12, 1, 3),
-(13, 1, 3),
-(14, 1, 3),
-(15, 1, 3),
-(16, 1, 3),
-(17, 1, 3),
-(18, 1, 3),
-(19, 1, 3),
-(20, 1, 3),
-(21, 79, 4),
-(22, 80, 4),
-(23, 81, 4),
-(24, 82, 4),
-(25, 83, 4),
-(26, 84, 4),
-(27, 85, 4),
-(28, 86, 4),
-(29, 87, 4),
-(30, 88, 4),
-(31, 1, 5),
-(32, 80, 5),
-(33, 1, 5),
-(34, 1, 5),
-(35, 83, 5),
-(36, 1, 5),
-(37, 1, 5),
-(38, 86, 5),
-(39, 87, 5),
-(40, 88, 5);
+(1, 79, 1),
+(2, 80, 1),
+(3, 81, 1),
+(4, 82, 1),
+(5, 83, 1),
+(6, 84, 1),
+(7, 85, 1),
+(8, 86, 1),
+(9, 87, 1),
+(10, 88, 1),
+(11, 79, 2),
+(12, 80, 2),
+(13, 81, 2),
+(14, 82, 2),
+(15, 83, 2),
+(16, 84, 2),
+(17, 85, 2),
+(18, 86, 2),
+(19, 87, 2),
+(20, 88, 2),
+(21, 79, 3),
+(22, 80, 3),
+(23, 81, 3),
+(24, 82, 3),
+(25, 83, 3),
+(26, 84, 3),
+(27, 85, 3),
+(28, 86, 3),
+(29, 87, 3),
+(30, 88, 3);
 
 -- --------------------------------------------------------
 
@@ -380,11 +354,9 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `lateralidad_id`, `sexo_id`, `peso`, `estatura`, `tall_cam`, `tall_pan`, `tall_zap`, `telefono`, `persona_id`, `representante_id`) VALUES
-(1, 22, 8, '60', '', '', 30, 35, '', 3, 1),
-(2, 22, 7, '50', '1', 'S', 4, 3, '', 15, 3),
-(3, 22, 8, '60', '1,60', 'xl', 35, 34, '', 16, 3),
-(4, 22, 7, '60', '1,60', '14', 16, 35, '04148425864', 20, 6),
-(5, 22, 7, '12', '1,60', 'S', 32, 35, '0424989', 21, 1);
+(1, 22, 7, '55', '1,70', 'S', 28, 40, '', 5, 1),
+(2, 22, 7, '50', '1,70', 'S', 34, 39, '', 6, 1),
+(3, 22, 8, '50', '1,60', 'S', 28, 36, '', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -406,10 +378,9 @@ CREATE TABLE `inscripciones` (
 --
 
 INSERT INTO `inscripciones` (`id`, `grado`, `seccion`, `periodo`, `status_id`, `estudiante_id`) VALUES
-(1, '1er', 'A', '2018', 98, 2),
-(2, '1er', 'E', '2018', 98, 3),
-(3, '3er', 'B', '2019', 98, 4),
-(4, '5to', 'F', '2019', 98, 5);
+(1, '5to', 'A', '2019', 98, 1),
+(2, '1er', 'A', '2019', 98, 2),
+(3, '1er', 'B', '2019', 98, 3);
 
 -- --------------------------------------------------------
 
@@ -2211,20 +2182,13 @@ CREATE TABLE `personas` (
 --
 
 INSERT INTO `personas` (`id`, `ci`, `nac_id`, `fec_nac`, `pri_nom`, `seg_nom`, `pri_ape`, `seg_ape`, `pais_id`) VALUES
-(1, '9898255', 4, '1968-11-27', 'Maria', '', 'Figuera', '', 115),
-(2, '8373', 4, '1966-06-06', 'Keli', '', 'Rodriguez', '', 115),
-(3, '22708373', 4, '1995-02-12', 'Mariangela', '', 'Rodríguez', '', 115),
-(6, '8377937', NULL, '0000-00-00', 'Wilmer', 'Iván', 'Yendiz', 'González', NULL),
-(7, '8989433', 4, '1990-05-05', 'Carlos', '', 'Perez', '', 101),
-(8, '2', 4, '1990-02-12', 'Maria', '', 'Rodriguez', '', 101),
-(9, '3', 4, '1990-03-31', 'Jose', '', 'Mata', '', 101),
-(15, '34787456', 4, '2018-11-14', 'Luis', '', 'Mata', '', 101),
-(16, '34555343', 4, '2008-09-09', 'Maria', '', 'Mata', '', 101),
-(18, '16176847', 4, '1978-11-22', 'Ana', 'Valentina', 'Gonzalez', 'Perez', 115),
-(19, '13589878', 4, '1978-02-01', 'Jose', 'Angel', 'Vasquez', 'Figuera', 115),
-(20, '26361738', 4, '2006-12-12', 'Angel', 'David', 'Vasquez', 'Gonzalez', 115),
-(21, '26997629', 4, '1998-04-10', 'Jesus', '', 'Rodriguez', '', 115),
-(22, '123', NULL, NULL, 'Andres', '', 'Mata', '', NULL);
+(1, '000000', 4, '1998-04-10', 'Administrador', NULL, 'Default', NULL, 115),
+(2, '8377937', 4, '1968-07-01', 'Wilmer', 'Iván', 'Yendiz', 'González', 115),
+(3, '19216801', 4, '1980-09-10', 'José', '', 'Perez', '', 115),
+(4, '12700180', 4, '1970-11-12', 'Josefina', '', 'Gil', '', 115),
+(5, '31916981', 4, '2003-02-01', 'José', 'Angel', 'Perez', 'Gil', 115),
+(6, '31916982', 4, '2005-11-12', 'Alberto', '', 'Perez', 'Gil', 115),
+(7, '31916983', 4, '2005-12-12', 'Josefina', '', 'Perez', 'Gil', 115);
 
 -- --------------------------------------------------------
 
@@ -2254,13 +2218,8 @@ CREATE TABLE `representantes` (
 --
 
 INSERT INTO `representantes` (`id`, `edocivil_id`, `lug_nac`, `profesion`, `empresa`, `lug_trab`, `telf_emp`, `telf_cel`, `telf_hab`, `correo`, `parentesco_id`, `legal`, `persona_id`, `dependencia_id`) VALUES
-(1, 10, 'Macuare', 'Docente', '', '', '', '', '', '', 17, 'Si', 1, NULL),
-(2, 10, 'Maturin', 'Docente', '', '', '', '', '', '', 16, 'No', 2, 1),
-(3, 10, '', 'Desempleado', '', '', '', '', '', '', 18, 'Si', 7, NULL),
-(4, 10, '', '', '', '', '', '', '', '', 17, 'No', 8, 3),
-(5, 10, '', '', '', '', '', '', '', '', 16, 'No', 9, 3),
-(6, 10, 'Maturin', 'Ama de casa', '', '', '', '', '', '', 17, 'Si', 18, NULL),
-(7, 10, 'Maturin', 'Electricista', 'Corpoelec', 'Corpoelec', '02917893311', '', '', '', 16, 'No', 19, 6);
+(1, 12, 'Maturin', 'Comerciante', 'Mary C.A.', 'Av. Bolivar', '02912233444', '04241122333', '02913344555', 'jperez@gmail.com', 17, 'Si', 3, NULL),
+(2, 12, 'Maturin', 'Ama de casa', '', '', '', '', '02913344555', 'finag@gmail.com', 16, 'No', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -2281,8 +2240,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `nivel_id`, `persona_id`) VALUES
-(1, 'V-8377937', '8377937', 91, 6),
-(2, 'V-123', '123', 92, 22);
+(1, 'V-000000', 'admin', 1, 1),
+(2, 'V-8377937', '8377937', 91, 2);
 
 -- --------------------------------------------------------
 
@@ -2301,26 +2260,18 @@ CREATE TABLE `vivienda` (
 --
 
 INSERT INTO `vivienda` (`id`, `dsc`, `persona_id`) VALUES
-(1, 27, 3),
-(2, 36, 3),
-(3, 41, 3),
-(4, 50, 3),
-(25, 27, 15),
-(26, 35, 15),
-(27, 41, 15),
-(28, 50, 15),
-(29, 27, 16),
-(30, 35, 16),
-(31, 41, 16),
-(32, 50, 16),
-(37, 29, 20),
-(38, 35, 20),
-(39, 45, 20),
-(40, 50, 20),
-(41, 27, 21),
-(42, 35, 21),
-(43, 41, 21),
-(44, 50, 21);
+(1, 27, 5),
+(2, 35, 5),
+(3, 41, 5),
+(4, 50, 5),
+(5, 27, 6),
+(6, 35, 6),
+(7, 41, 6),
+(8, 50, 6),
+(9, 27, 7),
+(10, 35, 7),
+(11, 41, 7),
+(12, 50, 7);
 
 --
 -- Índices para tablas volcadas
@@ -2456,25 +2407,25 @@ ALTER TABLE `vivienda`
 -- AUTO_INCREMENT de la tabla `academicos`
 --
 ALTER TABLE `academicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `direcciones`
 --
 ALTER TABLE `direcciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `div_funcional`
 --
 ALTER TABLE `div_funcional`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `documentos`
 --
 ALTER TABLE `documentos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `eav`
@@ -2492,13 +2443,13 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `inscripciones`
 --
 ALTER TABLE `inscripciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `municipios`
@@ -2522,13 +2473,13 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `personas`
 --
 ALTER TABLE `personas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `representantes`
 --
 ALTER TABLE `representantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -2540,7 +2491,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `vivienda`
 --
 ALTER TABLE `vivienda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
@@ -2589,7 +2540,7 @@ ALTER TABLE `estudiantes`
   ADD CONSTRAINT `estudiantes_ibfk_1` FOREIGN KEY (`persona_id`) REFERENCES `personas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `estudiantes_ibfk_2` FOREIGN KEY (`lateralidad_id`) REFERENCES `eav` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `estudiantes_ibfk_3` FOREIGN KEY (`sexo_id`) REFERENCES `eav` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `estudiantes_ibfk_4` FOREIGN KEY (`representante_id`) REFERENCES `representantes` (`id`);
+  ADD CONSTRAINT `estudiantes_ibfk_4` FOREIGN KEY (`representante_id`) REFERENCES `representantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `inscripciones`
@@ -2631,7 +2582,7 @@ ALTER TABLE `representantes`
 --
 ALTER TABLE `vivienda`
   ADD CONSTRAINT `vivienda_ibfk_1` FOREIGN KEY (`dsc`) REFERENCES `eav` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `vivienda_ibfk_2` FOREIGN KEY (`persona_id`) REFERENCES `personas` (`id`);
+  ADD CONSTRAINT `vivienda_ibfk_2` FOREIGN KEY (`persona_id`) REFERENCES `personas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

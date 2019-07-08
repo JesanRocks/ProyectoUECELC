@@ -18,6 +18,7 @@ require_once 'includes/nav.php';
  inner join estudiantes on personas.id=estudiantes.persona_id 
  inner join inscripciones on estudiantes.id=inscripciones.estudiante_id
  inner join representantes on estudiantes.representante_id=representantes.id
+ ORDER BY inscripciones.grado ASC, inscripciones.seccion ASC
 
  ";
 		$Ejec=mysqli_query($conexion,$SQL);

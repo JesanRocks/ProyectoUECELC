@@ -1,14 +1,14 @@
-	<footer class="bg-primary text-white" style="position: fixed; bottom: 0; width: 100%;">
+	<footer class="bg-primary text-white fixed-bottom" style="
+	//position: fixed; 
+	//bottom: 0; 
+	//width: 100%; 
+	//margin-top:250px;">
 		<center>  
-<!-- 			<img src="img/logo-uecelc-min.png" class="img-responsive" width="100px" height="100px">
-			<br> -->
-			<!-- <b> -->
-Educativa Complejo Educativo "Las Carolinas" - Código 006590203
-	<br>
-&copy; ZORDON 2018 - Algunos derechos reservados
-			<!-- </b> -->
+		Educativa Complejo Educativo "Las Carolinas" - Código 006590203
+			<br>
+		&copy; ZORDON 2018 - Algunos derechos reservados
+
 	  </center>    
-	<!-- <br> -->
 	</footer>
 </body>
 </html>

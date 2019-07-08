@@ -37,6 +37,11 @@
 	         <a class="nav-link text-white" href="documentos.php"><i class="fas fa-file-alt"></i> Documentos</a>
 	      	</li>
 
+		    <li class="nav-item">
+	         <a class="nav-link text-white" href="estadistica.php"><i class="fas fa-chart-bar"></i> Estadísticas</a>
+	      	</li>
+
+
 			<ul class="navbar-nav d-flex justify-content-end <?php if ($_SESSION['cargo']!="Director(a)") {echo"fade";}?>">
 		      <li class="nav-item dropdown ">
 		        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
